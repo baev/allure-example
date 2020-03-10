@@ -13,10 +13,6 @@ import org.junit.jupiter.api.Test;
 /**
  * @author eroshenkoam (Artem Eroshenko).
  */
-@Layer("web")
-@Owner("eroshenkoam")
-@Feature("Notes")
-@Page("/user/notes")
 public class NotesWebTest {
 
     private static final String NOTE_TEXT = "Cool place";
@@ -29,10 +25,6 @@ public class NotesWebTest {
     }
 
     @Test
-    @Story("Creating note")
-    @JiraIssues({@JiraIssue("AE-2")})
-    @Tags({@Tag("web"), @Tag("critical"), @Tag("smoke"), @Tag("regress")})
-    @DisplayName("Creating note for authorized user")
     public void shouldCreateUserNote() {
         steps.openNotesPage();
         steps.createNoteWithText(NOTE_TEXT);
@@ -40,10 +32,6 @@ public class NotesWebTest {
     }
 
     @Test
-    @Story("Creating note")
-    @Tags({@Tag("web"), @Tag("regress")})
-    @JiraIssues({@JiraIssue("AE-1")})
-    @DisplayName("Adding note to advertisement")
     public void shouldAddNoteToTheAd() {
         final Long id = 12971230L;
 
@@ -54,10 +42,6 @@ public class NotesWebTest {
     }
 
     @Test
-    @Story("Delete note")
-    @Tags({@Tag("web"), @Tag("regress")})
-    @JiraIssues({@JiraIssue("AE-1")})
-    @DisplayName("Deleting note for authorized user")
     public void shouldDeleteUserNote() {
         steps.openNotesPage();
         steps.createNoteWithText(NOTE_TEXT);

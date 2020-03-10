@@ -13,10 +13,6 @@ import org.junit.jupiter.api.Test;
 /**
  * @author eroshenkoam (Artem Eroshenko).
  */
-@Layer("web")
-@Owner("eroshenkoam")
-@Feature("Favorites")
-@Page("/user/favorites")
 public class FavoritesWebTest {
 
     private static final String NOTE_TEXT = "Cool place";
@@ -29,10 +25,6 @@ public class FavoritesWebTest {
     }
 
     @Test
-    @Story("Add to favorites")
-    @Tags({@Tag("web"), @Tag("regress"), @Tag("smoke")})
-    @JiraIssues({@JiraIssue("AE-1"), @JiraIssue("AE-2")})
-    @DisplayName("Adding to favorites for authorized user")
     public void shouldCreateUserNote() {
         steps.openNotesPage();
         steps.createNoteWithText(NOTE_TEXT);
@@ -40,10 +32,6 @@ public class FavoritesWebTest {
     }
 
     @Test
-    @JiraIssue("AE-2")
-    @Story("Remove from favorites")
-    @Tags({@Tag("web"), @Tag("regress")})
-    @DisplayName("Removing from favorites for authorized user")
     public void shouldDeleteUserNote() {
         steps.openNotesPage();
         steps.createNoteWithText(NOTE_TEXT);
