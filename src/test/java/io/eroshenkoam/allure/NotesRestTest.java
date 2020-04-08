@@ -1,5 +1,6 @@
 package io.eroshenkoam.allure;
 
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -18,6 +19,7 @@ public class NotesRestTest {
     private final RestSteps steps = new RestSteps();
 
     @Test
+    @AllureId("71")
     @Story("Creating note")
     @Tags({@Tag("api"), @Tag("smoke")})
     @DisplayName("Creating note via api")
@@ -27,6 +29,7 @@ public class NotesRestTest {
     }
 
     @Test
+    @AllureId("67")
     @Story("Delete note")
     @Tags({@Tag("web"), @Tag("regress")})
     @JiraIssues({@JiraIssue("AE-1")})

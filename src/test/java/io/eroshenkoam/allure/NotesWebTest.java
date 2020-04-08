@@ -1,5 +1,6 @@
 package io.eroshenkoam.allure;
 
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -29,6 +30,7 @@ public class NotesWebTest {
     }
 
     @Test
+    @AllureId("70")
     @Story("Creating note")
     @JiraIssues({@JiraIssue("AE-2")})
     @Tags({@Tag("web"), @Tag("critical"), @Tag("smoke"), @Tag("regress")})
@@ -40,6 +42,7 @@ public class NotesWebTest {
     }
 
     @Test
+    @AllureId("69")
     @Story("Creating note")
     @Tags({@Tag("web"), @Tag("regress")})
     @JiraIssues({@JiraIssue("AE-1")})
@@ -54,6 +57,7 @@ public class NotesWebTest {
     }
 
     @Test
+    @AllureId("66")
     @Story("Delete note")
     @Tags({@Tag("web"), @Tag("regress")})
     @JiraIssues({@JiraIssue("AE-1")})

@@ -1,5 +1,6 @@
 package io.eroshenkoam.allure;
 
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
@@ -29,6 +30,7 @@ public class FavoritesWebTest {
     }
 
     @Test
+    @AllureId("72")
     @Story("Add to favorites")
     @Tags({@Tag("web"), @Tag("regress"), @Tag("smoke")})
     @JiraIssues({@JiraIssue("AE-1"), @JiraIssue("AE-2")})
@@ -40,6 +42,7 @@ public class FavoritesWebTest {
     }
 
     @Test
+    @AllureId("68")
     @JiraIssue("AE-2")
     @Story("Remove from favorites")
     @Tags({@Tag("web"), @Tag("regress")})
