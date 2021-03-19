@@ -32,12 +32,6 @@ jobs:
           ALLURE_ENDPOINT: ${{ secrets.ALLURE_ENDPOINT }}
           ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
           ALLURE_PROJECT_ID: 29
-      - name: Upload realtime once again
-        run: allurectl upload --job-run-child --timeout 1800 build/allure-results &
-        env:
-          ALLURE_ENDPOINT: ${{ secrets.ALLURE_ENDPOINT }}
-          ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
-          ALLURE_PROJECT_ID: 29
       - name: Build with Gradle
         run: ./gradlew build
       - name: List allure-results
