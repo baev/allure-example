@@ -20,8 +20,6 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: PWD 1
-      run: pwd
     - name: Make allure-results dir
       run: mkdir -p build/allure-results
     - name: Set up allurectl
@@ -34,8 +32,8 @@ jobs:
         ALLURE_ENDPOINT: ${{ secrets.ALLURE_ENDPOINT }}
         ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
         ALLURE_PROJECT_ID: 29
-    - name: PWD 2
-      run: pwd
     - name: Build with Gradle
       run: ./gradlew build
+    - name: List allure-results
+        run: ls -l build/allure-results
 
