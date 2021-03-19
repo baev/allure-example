@@ -21,6 +21,8 @@ jobs:
         java-version: 1.8
     - name: PWD 1
       run: pwd
+    - name: Make allure-results dir
+      run: mkdir -p build/allure-results
     - name: Set up allurectl
       uses: baev/allurectl-setup@main
       with:
