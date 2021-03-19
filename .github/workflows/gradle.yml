@@ -29,7 +29,8 @@ jobs:
         ALLURE_ENDPOINT: ${{ secrets.ALLURE_ENDPOINT }}
         ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
         ALLURE_PROJECT_ID: 29
-
+    - name: PWD
+      run: pwd
     - name: Build with Gradle
       run: ./gradlew build
 
