@@ -35,5 +35,5 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
       - name: List allure-results
-        run: ls -l build/allure-results
+        run: ls -d -1 "$PWD/"build/allure-results/*
 
