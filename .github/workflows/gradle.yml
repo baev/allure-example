@@ -25,7 +25,7 @@ jobs:
       - name: Set up allurectl
         uses: baev/allurectl-setup@main
         with:
-          version: 1.16.4
+          version: 1.16.5
       - name: Allure TestOps Integration
         uses: baev/action-allure-testops@main
         env:
