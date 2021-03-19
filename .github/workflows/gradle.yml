@@ -19,6 +19,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: PWD 1
+      run: pwd
     - name: Set up allurectl
       uses: baev/allurectl-setup@main
       with:
@@ -29,7 +31,7 @@ jobs:
         ALLURE_ENDPOINT: ${{ secrets.ALLURE_ENDPOINT }}
         ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
         ALLURE_PROJECT_ID: 29
-    - name: PWD
+    - name: PWD 2
       run: pwd
     - name: Build with Gradle
       run: ./gradlew build
