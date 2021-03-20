@@ -29,7 +29,7 @@ jobs:
       - name: Allure TestOps Integration
         uses: baev/action-allure-testops@main
         with:
-          results: ./build/allure-results
+          results: ./build
         env:
           ALLURE_ENDPOINT: ${{ secrets.ALLURE_ENDPOINT }}
           ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
