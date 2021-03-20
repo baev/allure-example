@@ -28,6 +28,8 @@ jobs:
           version: 1.16.5
       - name: Allure TestOps Integration
         uses: baev/action-allure-testops@main
+        with:
+          results: ./build/allure-results
         env:
           ALLURE_ENDPOINT: ${{ secrets.ALLURE_ENDPOINT }}
           ALLURE_TOKEN: ${{ secrets.ALLURE_TOKEN }}
